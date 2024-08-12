@@ -18,8 +18,8 @@ body {
 }
 #maze_holder {
     display: grid;
-    grid-template-rows: repeat(5, var(--grid_size));
-    grid-template-columns: repeat(5, var(--grid_size));
+    grid-template-rows: repeat(51, var(--grid_size));
+    grid-template-columns: repeat(51, var(--grid_size));
     position: absolute;
 }
 #player {
@@ -32,4 +32,30 @@ body {
     border-style: solid;
     border-color: darkblue;
     z-index: 1;
+}
+#touchscreen_controls {
+    display: grid;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: 30px;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(2, 70px);
+    grid-template-areas:    ". up ."
+                            "left down right";
+}
+.touchscreen_button {
+    background-color: blueviolet;
+}
+#up {
+    grid-area: up;
+}
+#left {
+    grid-area: left;
+}
+#down {
+    grid-area: down;
+}
+#right {
+    grid-area: right;
 }
